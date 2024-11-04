@@ -26,8 +26,8 @@ def pull_location_data():
 
     response = loadDb['v4loadDetail'].find({
         "PickupDate": {
-            "$gte": datetime.datetime(2024,4,1),
-            "$lte": datetime.datetime(2024,5,1)
+            "$gte": datetime.datetime(2024,7,1),
+            "$lte": datetime.datetime(2024,8,1)
         },
         "LoadStatus": {
             "$in": ['Delivered', 'Dispatched', 'Planned']
@@ -305,7 +305,6 @@ def plot_clusters(data):
     #print(geo_data)
 
     plt.show()
-
 
 def __main__():
 
